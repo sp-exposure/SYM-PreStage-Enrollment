@@ -22,9 +22,9 @@
 ##################################################
 
 pathToScript=$0
-pathToPackage=$1
-targetLocation=$2
-targetVolume=$3
+pathToPackage=${argv[1]}
+targetLocation=${argv[2]}
+targetVolume=${argv[3]}
 
 # Script Variables
 scriptVersion="1.2.2"
