@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/zsh -xv 2> /Users/Shared/debug.log
 ## postinstall
 
 # Postinstall script which creates the following:
@@ -29,7 +29,7 @@ targetVolume=$3
 # Script Variables
 scriptVersion="1.2.2"
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin/
-organizationIdentifier="com.company"
+organizationIdentifier="net.thecasbah"
 scriptLog="/var/log/${organizationIdentifier}.log"
 osVersion=$( sw_vers -productVersion )
 osBuild=$( sw_vers -buildVersion )
