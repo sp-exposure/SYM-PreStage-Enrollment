@@ -1,4 +1,4 @@
-#!/bin/zsh -xv 2> /Users/Shared/debug.log
+#!/bin/zsh
 ## postinstall
 
 # Postinstall script which creates the following:
@@ -22,15 +22,15 @@
 ##################################################
 
 pathToScript=$0
-pathToPackage=${argv[1]}
-targetLocation=${argv[2]}
-targetVolume=${argv[3]}
+pathToPackage=$1
+targetLocation=$2
+targetVolume=$3
 
 # Script Variables
 scriptVersion="1.2.2"
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin/
 organizationIdentifier="net.thecasbah"
-scriptLog="/var/log/${organizationIdentifier}.log"
+scriptLog="/var/log/${organizationIdentifier}.prestage.log"
 osVersion=$( sw_vers -productVersion )
 osBuild=$( sw_vers -buildVersion )
 tempUtilitiesPath="/usr/local/SYM-enrollment"
